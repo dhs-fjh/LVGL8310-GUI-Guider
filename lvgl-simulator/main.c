@@ -149,8 +149,8 @@ static void hal_init(void)
 
     /*Create a display buffer*/
     static lv_disp_draw_buf_t disp_buf1;
-    static lv_color_t buf1_1[MONITOR_HOR_RES * MONITOR_VER_RES];
-    lv_disp_draw_buf_init(&disp_buf1, buf1_1, NULL, MONITOR_HOR_RES * MONITOR_VER_RES);
+    static lv_color_t buf1_1[MONITOR_HOR_RES * 10];  // 10 lines refresh area
+    lv_disp_draw_buf_init(&disp_buf1, buf1_1, NULL, MONITOR_HOR_RES * 10);
 
     /*Create a display*/
     static lv_disp_drv_t disp_drv;

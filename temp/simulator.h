@@ -47,7 +47,7 @@
 #define LV_MEM_CUSTOM 0
 #if LV_MEM_CUSTOM == 0
 /*Size of the memory available for `lv_mem_alloc()` in bytes (>= 2kB)*/
-#define LV_MEM_SIZE (320U * 1024U)
+#define LV_MEM_SIZE (48U * 1024U)
 #else     /* LV_MEM_CUSTOM */
 /*Header for the dynamic memory function*/
 #define LV_MEM_CUSTOM_INCLUDE <stdlib.h>
@@ -71,7 +71,7 @@
  *====================*/
 
 /*Default display refresh period in milliseconds. LVG will redraw changed areas with this period time*/
-#define LV_DISP_DEF_REFR_PERIOD 30
+#define LV_DISP_DEF_REFR_PERIOD 10
 
 /*Input device read period in milliseconds*/
 #define LV_INDEV_DEF_READ_PERIOD 30
@@ -184,7 +184,7 @@
  *-----------*/
 
 /*Enable the log module*/
-#define LV_USE_LOG 0
+#define LV_USE_LOG 1
 #if LV_USE_LOG
 /*How important log should be added:
 *LV_LOG_LEVEL_TRACE       A lot of logs to give detailed information
@@ -236,14 +236,14 @@
  *-----------*/
 
 /*1: Show CPU usage and FPS count*/
-#define LV_USE_PERF_MONITOR 0
+#define LV_USE_PERF_MONITOR 1
 #if LV_USE_PERF_MONITOR
 #define LV_USE_PERF_MONITOR_POS LV_ALIGN_BOTTOM_RIGHT
 #endif    /* LV_USE_PERF_MONITOR */
 
 /*1: Show the used memory and the memory fragmentation
  * Requires LV_MEM_CUSTOM = 0*/
-#define LV_USE_MEM_MONITOR 0
+#define LV_USE_MEM_MONITOR 1
 #if LV_USE_MEM_MONITOR
 #define LV_USE_MEM_MONITOR_POS LV_ALIGN_BOTTOM_LEFT
 #endif    /* LV_USE_MEM_MONITOR */

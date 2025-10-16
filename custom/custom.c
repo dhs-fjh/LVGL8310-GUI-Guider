@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include "lvgl.h"
 #include "custom.h"
+#include "ui_events.h"
 
 /*********************
  *      DEFINES
@@ -38,5 +39,8 @@
 void custom_init(lv_ui *ui)
 {
     /* Add your codes here */
+
+    // Initialize all UI event handlers for navigation
+    ui_events_init(ui);
 }
 
