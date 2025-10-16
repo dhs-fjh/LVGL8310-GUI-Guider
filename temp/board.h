@@ -75,13 +75,9 @@
 
 /*Input device read period in milliseconds*/
 #define LV_INDEV_DEF_READ_PERIOD 30
-
-/*Use a custom tick source that tells the elapsed time in milliseconds.
- *It removes the need to manually update the tick with `lv_tick_inc()`)*/
-#define LV_TICK_CUSTOM 0
 #if LV_TICK_CUSTOM
 /*Header for the system time function*/
-#define LV_TICK_CUSTOM_INCLUDE <emscripten.h>
+#define LV_TICK_CUSTOM_INCLUDE "nxp_gg_utils.h"
 /*Expression evaluating to current system time in ms*/
 #define LV_TICK_CUSTOM_SYS_TIME_EXPR ((uint32_t)emscripten_get_now())
 #endif    /* LV_TICK_CUSTOM */
@@ -288,8 +284,6 @@
 #define LV_ATTRIBUTE_FLUSH_READY 
 
 #ifndef LV_ATTRIBUTE_LARGE_CONST
-/*Attribute to mark large constant arrays for example font's bitmaps*/
-#define LV_ATTRIBUTE_LARGE_CONST 
 #endif    /* LV_ATTRIBUTE_LARGE_CONST */
 
 /*Compiler prefix for a big array declaration in RAM*/
@@ -427,19 +421,19 @@
  *================*/
 
 /*Documentation of the widgets: https://docs.lvgl.io/latest/en/html/widgets/index.html*/
-#define LV_USE_ARC 1
+#define LV_USE_ARC 0
 
 #define LV_USE_BAR 1
 
 #define LV_USE_BTN 1
 
-#define LV_USE_BTNMATRIX 1
+#define LV_USE_BTNMATRIX 0
 
-#define LV_USE_CANVAS 1
+#define LV_USE_CANVAS 0
 
 #define LV_USE_CHECKBOX 1
 
-#define LV_USE_DROPDOWN 1
+#define LV_USE_DROPDOWN 0
 
 #define LV_USE_IMG 1
 
@@ -451,9 +445,9 @@
 #define LV_LABEL_LONG_TXT_HINT 1
 #endif    /* LV_USE_LABEL */
 
-#define LV_USE_LINE 1
+#define LV_USE_LINE 0
 
-#define LV_USE_ROLLER 1
+#define LV_USE_ROLLER 0
 #if LV_USE_ROLLER
 /*Number of extra "pages" when the roller is infinite*/
 #define LV_ROLLER_INF_PAGES 7
@@ -461,14 +455,14 @@
 
 #define LV_USE_SLIDER 1
 
-#define LV_USE_SWITCH 1
+#define LV_USE_SWITCH 0
 
-#define LV_USE_TEXTAREA 1
+#define LV_USE_TEXTAREA 0
 #if LV_USE_TEXTAREA
 #define LV_TEXTAREA_DEF_PWD_SHOW_TIME 1500
 #endif    /* LV_USE_TEXTAREA */
 
-#define LV_USE_TABLE 1
+#define LV_USE_TABLE 0
 
 /*==================
  * EXTRA COMPONENTS
@@ -480,9 +474,9 @@
 
 #define LV_USE_ANALOGCLOCK 0
 
-#define LV_USE_ANIMIMG 1
+#define LV_USE_ANIMIMG 0
 
-#define LV_USE_CALENDAR 1
+#define LV_USE_CALENDAR 0
 #if LV_USE_CALENDAR
 #define LV_CALENDAR_WEEK_STARTS_MONDAY 0
 #if LV_CALENDAR_WEEK_STARTS_MONDAY == 0
@@ -493,47 +487,47 @@
 #define LV_USE_CALENDAR_HEADER_DROPDOWN 1
 #endif    /* LV_USE_CALENDAR */
 
-#define LV_USE_CAROUSEL 1
+#define LV_USE_CAROUSEL 0
 
-#define LV_USE_CHART 1
+#define LV_USE_CHART 0
 
-#define LV_USE_COLORWHEEL 1
+#define LV_USE_COLORWHEEL 0
 
-#define LV_USE_DCLOCK 1
+#define LV_USE_DCLOCK 0
 
-#define LV_USE_IMGBTN 1
+#define LV_USE_IMGBTN 0
 
 #define LV_USE_KEYBOARD 0
 
-#define LV_USE_LED 1
+#define LV_USE_LED 0
 
 #define LV_USE_LIST 1
 
-#define LV_USE_MENU 1
+#define LV_USE_MENU 0
 
-#define LV_USE_METER 1
+#define LV_USE_METER 0
 
-#define LV_USE_MSGBOX 1
+#define LV_USE_MSGBOX 0
 
-#define LV_USE_RADIOBTN 1
+#define LV_USE_RADIOBTN 0
 
-#define LV_USE_SPAN 1
+#define LV_USE_SPAN 0
 #if LV_USE_SPAN
 /*A line text can contain maximum num of span descriptor */
 #define LV_SPAN_SNIPPET_STACK_SIZE 64
 #endif    /* LV_USE_SPAN */
 
-#define LV_USE_SPINBOX 1
+#define LV_USE_SPINBOX 0
 
-#define LV_USE_SPINNER 1
+#define LV_USE_SPINNER 0
 
-#define LV_USE_TABVIEW 1
+#define LV_USE_TABVIEW 0
 
-#define LV_USE_TILEVIEW 1
+#define LV_USE_TILEVIEW 0
 
 #define LV_USE_VIDEO 0
 
-#define LV_USE_WIN 1
+#define LV_USE_WIN 0
 
 #define LV_USE_ZH_KEYBOARD 0
 #if LV_USE_ZH_KEYBOARD
@@ -581,7 +575,7 @@
 #define LV_USE_FS_STDIO 0
 #if LV_USE_FS_STDIO
 /*Set an upper cased letter on which the drive will accessible (e.g. 'A')*/
-#define LV_FS_STDIO_LETTER 'C'
+#define LV_FS_STDIO_LETTER '\0'
 /*Set the working directory. File/directory paths will be appended to it.*/
 #define LV_FS_STDIO_PATH ""
 /*>0 to cache this number of bytes in lv_fs_read()*/
@@ -614,7 +608,7 @@
 #define LV_USE_FS_FATFS 0
 #if LV_USE_FS_FATFS
 /*Set an upper cased letter on which the drive will accessible (e.g. 'A')*/
-#define LV_FS_FATFS_LETTER '\0'
+#define LV_FS_FATFS_LETTER 'S'
 /*>0 to cache this number of bytes in lv_fs_read()*/
 #define LV_FS_FATFS_CACHE_SIZE 0
 #endif    /* LV_USE_FS_FATFS */
@@ -623,7 +617,7 @@
 #define LV_USE_FS_RAWFS 0
 #if LV_USE_FS_RAWFS
 /*Set an upper cased letter on which the drive will accessible (e.g. 'A')*/
-#define LV_FS_RAWFS_LETTER '\0'
+#define LV_FS_RAWFS_LETTER 'F'
 /*use the XIP flash*/
 #define LV_FS_RAWFS_XIP 0
 #if LV_FS_RAWFS_XIP
@@ -646,7 +640,7 @@
 #define LV_USE_GIF 0
 
 /*QR code library*/
-#define LV_USE_QRCODE 1
+#define LV_USE_QRCODE 0
 
 /*FreeType library*/
 #define LV_USE_FREETYPE 0
@@ -715,32 +709,23 @@
 #endif    /* LV_IME_PINYIN_USE_K9_MODE */
 #endif    /* LV_USE_IME_PINYIN */
 /*Enable the text progress bar*/
-#define LV_USE_TEXTPROGRESS 1
+#define LV_USE_TEXTPROGRESS 0
 /*Enable the barcode*/
 #define LV_USE_BARCODE 0
 
-#define LV_USE_GUIDER_SIMULATOR 1
+#define LV_USE_GUIDER_SIMULATOR 0
 /* Enable the FreeMaster integration */
 #define LV_USE_FREEMASTER 0
 
 /*====================
  * DEVICES
  *====================*/
-
-/*Use Wayland to open a window and handle input on Linux or BSD desktops */
-#define LV_USE_WAYLAND 0
-
-/*Driver for /dev/dri/card*/
-#define LV_USE_LINUX_DRM 0
 #if LV_USE_LINUX_DRM
-#define LV_LINUX_DRM_CARD ""
+#define LV_LINUX_DRM_CARD "/dev/dri/card0"
 #endif    /* LV_USE_LINUX_DRM */
-
-/*Driver for evdev input devices*/
-#define LV_USE_EVDEV 0
 #if LV_USE_EVDEV
 /*Deafult evdev input device*/
-#define LV_EVDEV_DEVICE ""
+#define LV_EVDEV_DEVICE "/dev/input/event1"
 #endif    /* LV_USE_EVDEV */
 
 #include "lv_conf_ext.h"
