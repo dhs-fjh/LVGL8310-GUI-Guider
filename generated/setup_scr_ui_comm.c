@@ -104,29 +104,6 @@ void setup_scr_ui_comm(lv_ui *ui)
     lv_obj_add_style(ui->ui_comm_list_comm_item1, &style_ui_comm_list_comm_extra_texts_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_add_style(ui->ui_comm_list_comm_item0, &style_ui_comm_list_comm_extra_texts_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-    //Write codes ui_comm_btn_home
-    ui->ui_comm_btn_home = lv_btn_create(ui->ui_comm);
-    ui->ui_comm_btn_home_label = lv_label_create(ui->ui_comm_btn_home);
-    lv_label_set_text(ui->ui_comm_btn_home_label, "" LV_SYMBOL_HOME " ");
-    lv_label_set_long_mode(ui->ui_comm_btn_home_label, LV_LABEL_LONG_WRAP);
-    lv_obj_align(ui->ui_comm_btn_home_label, LV_ALIGN_CENTER, 0, 0);
-    lv_obj_set_style_pad_all(ui->ui_comm_btn_home, 0, LV_STATE_DEFAULT);
-    lv_obj_set_width(ui->ui_comm_btn_home_label, LV_PCT(100));
-    lv_obj_set_pos(ui->ui_comm_btn_home, 5, 5);
-    lv_obj_set_size(ui->ui_comm_btn_home, 40, 30);
-
-    //Write style for ui_comm_btn_home, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_bg_opa(ui->ui_comm_btn_home, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui->ui_comm_btn_home, lv_color_hex(0xff0027), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui->ui_comm_btn_home, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_width(ui->ui_comm_btn_home, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->ui_comm_btn_home, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->ui_comm_btn_home, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_color(ui->ui_comm_btn_home, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->ui_comm_btn_home, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui->ui_comm_btn_home, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->ui_comm_btn_home, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
-
     //Write codes ui_comm_label_title
     ui->ui_comm_label_title = lv_label_create(ui->ui_comm);
     lv_label_set_text(ui->ui_comm_label_title, "Communication");
@@ -149,6 +126,29 @@ void setup_scr_ui_comm(lv_ui *ui)
     lv_obj_set_style_pad_bottom(ui->ui_comm_label_title, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_left(ui->ui_comm_label_title, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_width(ui->ui_comm_label_title, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_comm_btn_home
+    ui->ui_comm_btn_home = lv_btn_create(ui->ui_comm);
+    ui->ui_comm_btn_home_label = lv_label_create(ui->ui_comm_btn_home);
+    lv_label_set_text(ui->ui_comm_btn_home_label, "" LV_SYMBOL_HOME " ");
+    lv_label_set_long_mode(ui->ui_comm_btn_home_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->ui_comm_btn_home_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->ui_comm_btn_home, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->ui_comm_btn_home_label, LV_PCT(100));
+    lv_obj_set_pos(ui->ui_comm_btn_home, 5, 5);
+    lv_obj_set_size(ui->ui_comm_btn_home, 40, 30);
+
+    //Write style for ui_comm_btn_home, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->ui_comm_btn_home, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_comm_btn_home, lv_color_hex(0xff0027), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_comm_btn_home, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_comm_btn_home, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_comm_btn_home, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_comm_btn_home, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_comm_btn_home, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_comm_btn_home, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_comm_btn_home, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_comm_btn_home, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
     //The custom code of ui_comm.
 

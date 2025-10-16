@@ -15,6 +15,8 @@
 #include "freemaster_client.h"
 #endif
 
+static uint32_t ui_led_slider_period_val = 500;
+static uint8_t ui_led_cb_blink_checked = 0;
 
 static void ui_main_btn_pwr_event_handler (lv_event_t *e)
 {
@@ -141,20 +143,6 @@ static void ui_storage_event_handler (lv_event_t *e)
     }
 }
 
-static void ui_storage_btn_home_event_handler (lv_event_t *e)
-{
-    lv_event_code_t code = lv_event_get_code(e);
-    switch (code) {
-    case LV_EVENT_CLICKED:
-    {
-        ui_load_scr_animation(&guider_ui, &guider_ui.ui_main, guider_ui.ui_main_del, &guider_ui.ui_storage_del, setup_scr_ui_main, LV_SCR_LOAD_ANIM_MOVE_RIGHT, 200, 0, false, true);
-        break;
-    }
-    default:
-        break;
-    }
-}
-
 static void ui_storage_btn_next_event_handler (lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
@@ -181,12 +169,26 @@ static void ui_storage_btn_prev_event_handler (lv_event_t *e)
     }
 }
 
+static void ui_storage_btn_home_event_handler (lv_event_t *e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    switch (code) {
+    case LV_EVENT_CLICKED:
+    {
+        ui_load_scr_animation(&guider_ui, &guider_ui.ui_main, guider_ui.ui_main_del, &guider_ui.ui_storage_del, setup_scr_ui_main, LV_SCR_LOAD_ANIM_MOVE_RIGHT, 200, 0, false, true);
+        break;
+    }
+    default:
+        break;
+    }
+}
+
 void events_init_ui_storage (lv_ui *ui)
 {
     lv_obj_add_event_cb(ui->ui_storage, ui_storage_event_handler, LV_EVENT_ALL, ui);
-    lv_obj_add_event_cb(ui->ui_storage_btn_home, ui_storage_btn_home_event_handler, LV_EVENT_ALL, ui);
     lv_obj_add_event_cb(ui->ui_storage_btn_next, ui_storage_btn_next_event_handler, LV_EVENT_ALL, ui);
     lv_obj_add_event_cb(ui->ui_storage_btn_prev, ui_storage_btn_prev_event_handler, LV_EVENT_ALL, ui);
+    lv_obj_add_event_cb(ui->ui_storage_btn_home, ui_storage_btn_home_event_handler, LV_EVENT_ALL, ui);
 }
 
 static void ui_comm_btn_home_event_handler (lv_event_t *e)
@@ -227,6 +229,70 @@ void events_init_ui_IO (lv_ui *ui)
     lv_obj_add_event_cb(ui->ui_IO_btn_home, ui_IO_btn_home_event_handler, LV_EVENT_ALL, ui);
 }
 
+static void ui_led_event_handler (lv_event_t *e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    switch (code) {
+    case LV_EVENT_SCREEN_LOAD_START:
+    {
+        // 加载LED闪烁间隔值
+        lv_slider_set_value(guider_ui.ui_led_slider_period, ui_led_slider_period_val, LV_ANIM_OFF);
+        char buf[5];
+        lv_snprintf(buf, sizeof(buf), "%4d", ui_led_slider_period_val);  // 格式化为4位数
+        lv_label_set_text(guider_ui.ui_led_label_period, buf);
+
+        // 加载LED闪烁使能值
+        if( ui_led_cb_blink_checked )
+            lv_obj_add_state(guider_ui.ui_led_cb_blink, LV_STATE_CHECKED);
+
+
+        break;
+    }
+    default:
+        break;
+    }
+}
+
+static void ui_led_slider_period_event_handler (lv_event_t *e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    switch (code) {
+    case LV_EVENT_VALUE_CHANGED:
+    {
+        lv_obj_t *slider = lv_event_get_target(e);
+        ui_led_slider_period_val = lv_slider_get_value(slider);
+        char buf[5];
+        lv_snprintf(buf, sizeof(buf), "%4d", ui_led_slider_period_val);  // 格式化为4位数
+        lv_label_set_text(guider_ui.ui_led_label_period, buf);
+        LV_LOG_USER("LED blink period: %d", ui_led_slider_period_val);
+        break;
+    }
+    default:
+        break;
+    }
+}
+
+static void ui_led_cb_blink_event_handler (lv_event_t *e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    switch (code) {
+    case LV_EVENT_CLICKED:
+    {
+        lv_obj_t * status_obj = lv_event_get_target(e);
+        int status = lv_obj_get_state(status_obj) & LV_STATE_CHECKED ? true : false;
+        if(lv_obj_has_state(guider_ui.ui_led_cb_blink, LV_STATE_CHECKED)) {
+            ui_led_cb_blink_checked = 1;
+        } else {
+            ui_led_cb_blink_checked = 0;
+        }
+        LV_LOG_USER("LED auto blink: %d", ui_led_cb_blink_checked);
+        break;
+    }
+    default:
+        break;
+    }
+}
+
 static void ui_led_btn_home_event_handler (lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
@@ -243,6 +309,9 @@ static void ui_led_btn_home_event_handler (lv_event_t *e)
 
 void events_init_ui_led (lv_ui *ui)
 {
+    lv_obj_add_event_cb(ui->ui_led, ui_led_event_handler, LV_EVENT_ALL, ui);
+    lv_obj_add_event_cb(ui->ui_led_slider_period, ui_led_slider_period_event_handler, LV_EVENT_ALL, ui);
+    lv_obj_add_event_cb(ui->ui_led_cb_blink, ui_led_cb_blink_event_handler, LV_EVENT_ALL, ui);
     lv_obj_add_event_cb(ui->ui_led_btn_home, ui_led_btn_home_event_handler, LV_EVENT_ALL, ui);
 }
 
