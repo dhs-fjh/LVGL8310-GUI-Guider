@@ -78,4 +78,6 @@ void setup_scr_ui_IO(lv_ui *ui)
     //Update current screen layout.
     lv_obj_update_layout(ui->ui_IO);
 
+    //Init events for screen.
+    events_init_ui_IO(ui);
 }

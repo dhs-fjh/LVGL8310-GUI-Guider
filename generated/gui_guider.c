@@ -77,10 +77,10 @@ void init_scr_del_flag(lv_ui *ui)
 
     ui->ui_main_del = true;
     ui->ui_settings_del = true;
+    ui->ui_storage_del = true;
     ui->ui_comm_del = true;
     ui->ui_IO_del = true;
     ui->ui_led_del = true;
-    ui->ui_storage_del = true;
 }
 
 void setup_ui(lv_ui *ui)

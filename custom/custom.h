@@ -17,6 +17,12 @@ extern "C" {
 
 void custom_init(lv_ui *ui);
 
+// File system browser functions - to be called from generated event handlers
+void custom_storage_init(lv_ui *ui);
+void custom_storage_cleanup(void);
+void custom_storage_prev_page(lv_ui *ui);
+void custom_storage_next_page(lv_ui *ui);
+
 #ifdef __cplusplus
 }
 #endif

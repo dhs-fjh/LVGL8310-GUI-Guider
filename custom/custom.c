@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include "lvgl.h"
 #include "custom.h"
-#include "ui_events.h"
+#include "ui_fs.h"
 
 /*********************
  *      DEFINES
@@ -33,14 +33,49 @@
  **********************/
 
 /**
- * Create a demo application
+ * Custom initialization - called once at startup
  */
-
 void custom_init(lv_ui *ui)
 {
     /* Add your codes here */
+    LV_LOG_USER("custom_init: ready");
+}
 
-    // Initialize all UI event handlers for navigation
-    ui_events_init(ui);
+/**
+ * Initialize file system browser on storage page
+ * Call this from events_init_ui_storage() in generated code
+ */
+void custom_storage_init(lv_ui *ui)
+{
+    LV_LOG_USER("custom_storage_init");
+    ui_fs_init(ui);
+}
+
+/**
+ * Cleanup file system browser when leaving storage page
+ * Call this from storage home button handler in generated code
+ */
+void custom_storage_cleanup(void)
+{
+    LV_LOG_USER("custom_storage_cleanup");
+    ui_fs_cleanup();
+}
+
+/**
+ * Navigate to previous page in file browser
+ * Call this from prev button handler in generated code
+ */
+void custom_storage_prev_page(lv_ui *ui)
+{
+    ui_fs_prev_page(ui);
+}
+
+/**
+ * Navigate to next page in file browser
+ * Call this from next button handler in generated code
+ */
+void custom_storage_next_page(lv_ui *ui)
+{
+    ui_fs_next_page(ui);
 }
 
