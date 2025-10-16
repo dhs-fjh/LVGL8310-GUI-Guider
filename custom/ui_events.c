@@ -14,6 +14,7 @@
 #include "lvgl.h"
 #include "gui_guider.h"
 #include "ui_events.h"
+#include "ui_fs.h"
 
 /*********************
  *  STATIC PROTOTYPES
@@ -26,6 +27,11 @@ static void ui_main_btn_IO_event_handler(lv_event_t * e);
 static void ui_main_btn_pwr_event_handler(lv_event_t * e);
 
 static void ui_subpage_btn_home_event_handler(lv_event_t * e);
+
+static void ui_storage_btn_prev_event_handler(lv_event_t * e);
+static void ui_storage_btn_next_event_handler(lv_event_t * e);
+
+static void ui_storage_delete_event_handler(lv_event_t * e);
 
 /**********************
  *   GLOBAL FUNCTIONS
@@ -65,6 +71,8 @@ void ui_events_init(lv_ui *ui)
 void ui_subpage_home_event_init(lv_ui *ui, lv_obj_t *home_btn)
 {
     if (home_btn) {
+        // Remove any existing callbacks first (shouldn't be any, but be safe)
+        lv_obj_remove_event_cb(home_btn, ui_subpage_btn_home_event_handler);
         lv_obj_add_event_cb(home_btn, ui_subpage_btn_home_event_handler, LV_EVENT_CLICKED, ui);
     }
 }
@@ -96,8 +104,43 @@ static void ui_main_btn_settings_event_handler(lv_event_t * e)
 // Wrapper function to setup storage page with events
 static void setup_scr_ui_storage_with_events(lv_ui *ui)
 {
+    LV_LOG_USER("storage_setup: 1");
+
     setup_scr_ui_storage(ui);
+    LV_LOG_USER("storage_setup: 2");
+
     ui_subpage_home_event_init(ui, ui->ui_storage_btn_home);
+    LV_LOG_USER("storage_setup: 3");
+
+    // Initialize file browser
+    ui_fs_init(ui);
+    LV_LOG_USER("storage_setup: 4");
+
+    // Add prev/next button events
+    if (ui->ui_storage_btn_prev) {
+        // Remove any existing event callbacks first
+        lv_obj_remove_event_cb(ui->ui_storage_btn_prev, ui_storage_btn_prev_event_handler);
+        lv_obj_add_event_cb(ui->ui_storage_btn_prev, ui_storage_btn_prev_event_handler, LV_EVENT_CLICKED, ui);
+        LV_LOG_USER("storage_setup: 5");
+    }
+
+    if (ui->ui_storage_btn_next) {
+        LV_LOG_USER("storage_setup: 5.5 removing old cb");
+        // Remove any existing event callbacks first
+        lv_obj_remove_event_cb(ui->ui_storage_btn_next, ui_storage_btn_next_event_handler);
+        LV_LOG_USER("storage_setup: 5.6 adding new cb");
+        lv_obj_add_event_cb(ui->ui_storage_btn_next, ui_storage_btn_next_event_handler, LV_EVENT_CLICKED, ui);
+        LV_LOG_USER("storage_setup: 6");
+    }
+
+    // Add delete event to clean up file system resources when screen is deleted
+    if (ui->ui_storage) {
+        lv_obj_remove_event_cb(ui->ui_storage, ui_storage_delete_event_handler);
+        lv_obj_add_event_cb(ui->ui_storage, ui_storage_delete_event_handler, LV_EVENT_DELETE, ui);
+        LV_LOG_USER("storage_setup: 7");
+    }
+
+    LV_LOG_USER("storage_setup: 8 OK");
 }
 
 // Storage button event handler - Navigate to storage page
@@ -209,11 +252,47 @@ static void ui_subpage_btn_home_event_handler(lv_event_t * e)
             del_flag = &ui->ui_led_del;
         } else if (current_scr == ui->ui_storage) {
             del_flag = &ui->ui_storage_del;
+            // Cleanup file system BEFORE navigating away from storage page
+            LV_LOG_USER("Leaving storage page, cleaning up file system resources");
+            ui_fs_cleanup();
         }
 
         if (del_flag != NULL) {
             ui_load_scr_animation(ui, &ui->ui_main, ui->ui_main_del, del_flag,
                                 setup_scr_ui_main_with_events, LV_SCR_LOAD_ANIM_FADE_ON, 200, 0, true, true);
         }
+    }
+}
+
+// Storage previous page button event handler
+static void ui_storage_btn_prev_event_handler(lv_event_t * e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    lv_ui *ui = (lv_ui *)lv_event_get_user_data(e);
+
+    if (code == LV_EVENT_CLICKED) {
+        ui_fs_prev_page(ui);
+    }
+}
+
+// Storage next page button event handler
+static void ui_storage_btn_next_event_handler(lv_event_t * e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    lv_ui *ui = (lv_ui *)lv_event_get_user_data(e);
+
+    if (code == LV_EVENT_CLICKED) {
+        ui_fs_next_page(ui);
+    }
+}
+
+// Storage screen delete event handler - cleanup file system resources
+static void ui_storage_delete_event_handler(lv_event_t * e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+
+    if (code == LV_EVENT_DELETE) {
+        LV_LOG_USER("Storage screen DELETE event - resources should already be cleaned");
+        // Don't cleanup here - it's too late, cleanup is done in home button handler
     }
 }

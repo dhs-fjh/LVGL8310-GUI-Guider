@@ -60,7 +60,7 @@ typedef struct
 	lv_obj_t *ui_led_cb_blink;
 	lv_obj_t *ui_led_cb_sta;
 	lv_obj_t *ui_led_slider_period;
-	lv_obj_t *ui_led_label_1;
+	lv_obj_t *ui_led_label_blink;
 	lv_obj_t *ui_storage;
 	bool ui_storage_del;
 	lv_obj_t *ui_storage_btn_home;
