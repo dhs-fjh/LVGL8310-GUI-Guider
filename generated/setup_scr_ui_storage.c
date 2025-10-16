@@ -141,6 +141,96 @@ void setup_scr_ui_storage(lv_ui *ui)
     lv_obj_set_style_pad_left(ui->ui_storage_label_page, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_width(ui->ui_storage_label_page, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+    //Write codes ui_storage_list_files
+    ui->ui_storage_list_files = lv_list_create(ui->ui_storage);
+    ui->ui_storage_list_files_item0 = lv_list_add_btn(ui->ui_storage_list_files, LV_SYMBOL_FILE, "file_0");
+    ui->ui_storage_list_files_item1 = lv_list_add_btn(ui->ui_storage_list_files, LV_SYMBOL_FILE, "file_1");
+    ui->ui_storage_list_files_item2 = lv_list_add_btn(ui->ui_storage_list_files, LV_SYMBOL_FILE, "file_2");
+    ui->ui_storage_list_files_item3 = lv_list_add_btn(ui->ui_storage_list_files, LV_SYMBOL_FILE, "file_3");
+    ui->ui_storage_list_files_item4 = lv_list_add_btn(ui->ui_storage_list_files, LV_SYMBOL_FILE, "file_4");
+    ui->ui_storage_list_files_item5 = lv_list_add_btn(ui->ui_storage_list_files, LV_SYMBOL_FILE, "file_5");
+    ui->ui_storage_list_files_item6 = lv_list_add_btn(ui->ui_storage_list_files, LV_SYMBOL_FILE, "file_6");
+    ui->ui_storage_list_files_item7 = lv_list_add_btn(ui->ui_storage_list_files, LV_SYMBOL_FILE, "file_7");
+    ui->ui_storage_list_files_item8 = lv_list_add_btn(ui->ui_storage_list_files, LV_SYMBOL_FILE, "file_8");
+    ui->ui_storage_list_files_item9 = lv_list_add_btn(ui->ui_storage_list_files, LV_SYMBOL_FILE, "file_9");
+    lv_obj_set_pos(ui->ui_storage_list_files, 5, 40);
+    lv_obj_set_size(ui->ui_storage_list_files, 310, 195);
+    lv_obj_set_scrollbar_mode(ui->ui_storage_list_files, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style state: LV_STATE_DEFAULT for &style_ui_storage_list_files_main_main_default
+    static lv_style_t style_ui_storage_list_files_main_main_default;
+    ui_init_style(&style_ui_storage_list_files_main_main_default);
+
+    lv_style_set_pad_top(&style_ui_storage_list_files_main_main_default, 5);
+    lv_style_set_pad_left(&style_ui_storage_list_files_main_main_default, 5);
+    lv_style_set_pad_right(&style_ui_storage_list_files_main_main_default, 5);
+    lv_style_set_pad_bottom(&style_ui_storage_list_files_main_main_default, 5);
+    lv_style_set_bg_opa(&style_ui_storage_list_files_main_main_default, 255);
+    lv_style_set_bg_color(&style_ui_storage_list_files_main_main_default, lv_color_hex(0xffffff));
+    lv_style_set_bg_grad_dir(&style_ui_storage_list_files_main_main_default, LV_GRAD_DIR_NONE);
+    lv_style_set_border_width(&style_ui_storage_list_files_main_main_default, 1);
+    lv_style_set_border_opa(&style_ui_storage_list_files_main_main_default, 255);
+    lv_style_set_border_color(&style_ui_storage_list_files_main_main_default, lv_color_hex(0xe1e6ee));
+    lv_style_set_border_side(&style_ui_storage_list_files_main_main_default, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_ui_storage_list_files_main_main_default, 3);
+    lv_style_set_shadow_width(&style_ui_storage_list_files_main_main_default, 0);
+    lv_obj_add_style(ui->ui_storage_list_files, &style_ui_storage_list_files_main_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style state: LV_STATE_DEFAULT for &style_ui_storage_list_files_main_scrollbar_default
+    static lv_style_t style_ui_storage_list_files_main_scrollbar_default;
+    ui_init_style(&style_ui_storage_list_files_main_scrollbar_default);
+
+    lv_style_set_radius(&style_ui_storage_list_files_main_scrollbar_default, 3);
+    lv_style_set_bg_opa(&style_ui_storage_list_files_main_scrollbar_default, 255);
+    lv_style_set_bg_color(&style_ui_storage_list_files_main_scrollbar_default, lv_color_hex(0xffffff));
+    lv_style_set_bg_grad_dir(&style_ui_storage_list_files_main_scrollbar_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(ui->ui_storage_list_files, &style_ui_storage_list_files_main_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write style state: LV_STATE_DEFAULT for &style_ui_storage_list_files_extra_btns_main_default
+    static lv_style_t style_ui_storage_list_files_extra_btns_main_default;
+    ui_init_style(&style_ui_storage_list_files_extra_btns_main_default);
+
+    lv_style_set_pad_top(&style_ui_storage_list_files_extra_btns_main_default, 5);
+    lv_style_set_pad_left(&style_ui_storage_list_files_extra_btns_main_default, 5);
+    lv_style_set_pad_right(&style_ui_storage_list_files_extra_btns_main_default, 5);
+    lv_style_set_pad_bottom(&style_ui_storage_list_files_extra_btns_main_default, 5);
+    lv_style_set_border_width(&style_ui_storage_list_files_extra_btns_main_default, 0);
+    lv_style_set_text_color(&style_ui_storage_list_files_extra_btns_main_default, lv_color_hex(0x0D3055));
+    lv_style_set_text_font(&style_ui_storage_list_files_extra_btns_main_default, &lv_font_montserratMedium_16);
+    lv_style_set_text_opa(&style_ui_storage_list_files_extra_btns_main_default, 255);
+    lv_style_set_radius(&style_ui_storage_list_files_extra_btns_main_default, 3);
+    lv_style_set_bg_opa(&style_ui_storage_list_files_extra_btns_main_default, 255);
+    lv_style_set_bg_color(&style_ui_storage_list_files_extra_btns_main_default, lv_color_hex(0xffffff));
+    lv_style_set_bg_grad_dir(&style_ui_storage_list_files_extra_btns_main_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(ui->ui_storage_list_files_item9, &style_ui_storage_list_files_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_add_style(ui->ui_storage_list_files_item8, &style_ui_storage_list_files_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_add_style(ui->ui_storage_list_files_item7, &style_ui_storage_list_files_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_add_style(ui->ui_storage_list_files_item6, &style_ui_storage_list_files_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_add_style(ui->ui_storage_list_files_item5, &style_ui_storage_list_files_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_add_style(ui->ui_storage_list_files_item4, &style_ui_storage_list_files_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_add_style(ui->ui_storage_list_files_item3, &style_ui_storage_list_files_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_add_style(ui->ui_storage_list_files_item2, &style_ui_storage_list_files_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_add_style(ui->ui_storage_list_files_item1, &style_ui_storage_list_files_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_add_style(ui->ui_storage_list_files_item0, &style_ui_storage_list_files_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style state: LV_STATE_DEFAULT for &style_ui_storage_list_files_extra_texts_main_default
+    static lv_style_t style_ui_storage_list_files_extra_texts_main_default;
+    ui_init_style(&style_ui_storage_list_files_extra_texts_main_default);
+
+    lv_style_set_pad_top(&style_ui_storage_list_files_extra_texts_main_default, 5);
+    lv_style_set_pad_left(&style_ui_storage_list_files_extra_texts_main_default, 5);
+    lv_style_set_pad_right(&style_ui_storage_list_files_extra_texts_main_default, 5);
+    lv_style_set_pad_bottom(&style_ui_storage_list_files_extra_texts_main_default, 5);
+    lv_style_set_border_width(&style_ui_storage_list_files_extra_texts_main_default, 0);
+    lv_style_set_text_color(&style_ui_storage_list_files_extra_texts_main_default, lv_color_hex(0x0D3055));
+    lv_style_set_text_font(&style_ui_storage_list_files_extra_texts_main_default, &lv_font_montserratMedium_16);
+    lv_style_set_text_opa(&style_ui_storage_list_files_extra_texts_main_default, 255);
+    lv_style_set_radius(&style_ui_storage_list_files_extra_texts_main_default, 3);
+    lv_style_set_transform_width(&style_ui_storage_list_files_extra_texts_main_default, 0);
+    lv_style_set_bg_opa(&style_ui_storage_list_files_extra_texts_main_default, 255);
+    lv_style_set_bg_color(&style_ui_storage_list_files_extra_texts_main_default, lv_color_hex(0xffffff));
+    lv_style_set_bg_grad_dir(&style_ui_storage_list_files_extra_texts_main_default, LV_GRAD_DIR_NONE);
+
     //The custom code of ui_storage.
 
 

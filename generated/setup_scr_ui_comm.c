@@ -75,7 +75,7 @@ void setup_scr_ui_comm(lv_ui *ui)
     lv_style_set_pad_bottom(&style_ui_comm_list_comm_extra_btns_main_default, 5);
     lv_style_set_border_width(&style_ui_comm_list_comm_extra_btns_main_default, 0);
     lv_style_set_text_color(&style_ui_comm_list_comm_extra_btns_main_default, lv_color_hex(0x0D3055));
-    lv_style_set_text_font(&style_ui_comm_list_comm_extra_btns_main_default, &lv_font_montserratMedium_12);
+    lv_style_set_text_font(&style_ui_comm_list_comm_extra_btns_main_default, &lv_font_montserratMedium_16);
     lv_style_set_text_opa(&style_ui_comm_list_comm_extra_btns_main_default, 255);
     lv_style_set_radius(&style_ui_comm_list_comm_extra_btns_main_default, 3);
     lv_style_set_bg_opa(&style_ui_comm_list_comm_extra_btns_main_default, 255);
@@ -92,7 +92,7 @@ void setup_scr_ui_comm(lv_ui *ui)
     lv_style_set_pad_bottom(&style_ui_comm_list_comm_extra_texts_main_default, 5);
     lv_style_set_border_width(&style_ui_comm_list_comm_extra_texts_main_default, 0);
     lv_style_set_text_color(&style_ui_comm_list_comm_extra_texts_main_default, lv_color_hex(0x0D3055));
-    lv_style_set_text_font(&style_ui_comm_list_comm_extra_texts_main_default, &lv_font_montserratMedium_12);
+    lv_style_set_text_font(&style_ui_comm_list_comm_extra_texts_main_default, &lv_font_montserratMedium_16);
     lv_style_set_text_opa(&style_ui_comm_list_comm_extra_texts_main_default, 255);
     lv_style_set_radius(&style_ui_comm_list_comm_extra_texts_main_default, 3);
     lv_style_set_transform_width(&style_ui_comm_list_comm_extra_texts_main_default, 0);

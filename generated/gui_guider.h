@@ -71,6 +71,17 @@ typedef struct
 	lv_obj_t *ui_storage_btn_prev;
 	lv_obj_t *ui_storage_btn_prev_label;
 	lv_obj_t *ui_storage_label_page;
+	lv_obj_t *ui_storage_list_files;
+	lv_obj_t *ui_storage_list_files_item0;
+	lv_obj_t *ui_storage_list_files_item1;
+	lv_obj_t *ui_storage_list_files_item2;
+	lv_obj_t *ui_storage_list_files_item3;
+	lv_obj_t *ui_storage_list_files_item4;
+	lv_obj_t *ui_storage_list_files_item5;
+	lv_obj_t *ui_storage_list_files_item6;
+	lv_obj_t *ui_storage_list_files_item7;
+	lv_obj_t *ui_storage_list_files_item8;
+	lv_obj_t *ui_storage_list_files_item9;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);
@@ -102,7 +113,6 @@ void setup_scr_ui_led(lv_ui *ui);
 void setup_scr_ui_storage(lv_ui *ui);
 
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
-LV_FONT_DECLARE(lv_font_montserratMedium_12)
 
 
 #ifdef __cplusplus
