@@ -497,8 +497,7 @@
 								]
 							}
 						}
-					},
-					"dropToGap": false
+					}
 				},
 				{
 					"name": "btn_storage",
@@ -1868,6 +1867,9 @@
 					]
 				}
 			],
+			"event": {
+				"widget": {}
+			},
 			"style": [
 				{
 					"part": "LV_PART_MAIN",
@@ -1886,9 +1888,6 @@
 					"bg_img_recolor_opa": 0
 				}
 			],
-			"event": {
-				"widget": {}
-			},
 			"layerName": "ui_settings"
 		},
 		{
@@ -1921,6 +1920,9 @@
 					"width": 40,
 					"height": 30,
 					"default_style": false,
+					"long_mode": "LV_LABEL_LONG_WRAP",
+					"text": "LV_SYMBOL_HOME ",
+					"toggle": false,
 					"style": [
 						{
 							"part": "LV_PART_MAIN",
@@ -1928,17 +1930,17 @@
 							"disable": false,
 							"bg_color": "#ff0027",
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
 							"bg_grad_stop": 255,
-							"bg_opa": 255,
-							"border_color": "#2195f6",
 							"border_side": [
 								"LV_BORDER_SIDE_FULL"
 							],
 							"border_width": 0,
 							"border_opa": 255,
+							"border_color": "#2195f6",
 							"radius": 5,
 							"shadow_color": "#2195f6",
 							"shadow_opa": 255,
@@ -1962,16 +1964,16 @@
 							"disable": true,
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
 							"bg_grad_stop": 255,
-							"bg_opa": 255,
-							"border_color": "#2195f6",
 							"border_side": [
 								"LV_BORDER_SIDE_FULL"
 							],
 							"border_width": 0,
+							"border_color": "#2195f6",
 							"border_opa": 255,
 							"radius": 5,
 							"shadow_color": "#2195f6",
@@ -1995,16 +1997,16 @@
 							"disable": true,
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
 							"bg_grad_stop": 255,
-							"bg_opa": 255,
-							"border_color": "#2195f6",
 							"border_side": [
 								"LV_BORDER_SIDE_FULL"
 							],
 							"border_width": 0,
+							"border_color": "#2195f6",
 							"border_opa": 255,
 							"radius": 5,
 							"shadow_color": "#2195f6",
@@ -2027,9 +2029,8 @@
 							"state": "LV_STATE_CHECKED",
 							"disable": true,
 							"bg_color": "#2195f6",
-							"radius": 5,
-							"bg_opa": 255,
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
@@ -2040,6 +2041,7 @@
 							"border_width": 0,
 							"border_opa": 255,
 							"border_color": "#2195f6",
+							"radius": 5,
 							"shadow_color": "#2195f6",
 							"shadow_opa": 255,
 							"shadow_width": 0,
@@ -2061,21 +2063,18 @@
 							"disable": true,
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
 							"bg_grad_stop": 255,
-							"border_color": "#2195f6",
 							"border_side": [
 								"LV_BORDER_SIDE_FULL"
 							],
 							"border_width": 0,
 							"border_opa": 255,
-							"text_color": "#000000",
-							"font": 12,
-							"font_family": "montserratMedium",
+							"border_color": "#2195f6",
 							"radius": 5,
-							"bg_opa": 255,
 							"shadow_color": "#2195f6",
 							"shadow_opa": 255,
 							"shadow_width": 0,
@@ -2086,12 +2085,12 @@
 							"bg_img_opa": 255,
 							"bg_img_recolor": "#ffffff",
 							"bg_img_recolor_opa": 0,
-							"text_opa": 255
+							"font": 12,
+							"font_family": "montserratMedium",
+							"text_opa": 255,
+							"text_color": "#000000"
 						}
 					],
-					"long_mode": "LV_LABEL_LONG_WRAP",
-					"text": "LV_SYMBOL_HOME ",
-					"toggle": false,
 					"event": {
 						"widget": {
 							"clicked": {
@@ -2114,8 +2113,7 @@
 								]
 							}
 						}
-					},
-					"dropToGap": false
+					}
 				},
 				{
 					"name": "label_page",
@@ -2329,6 +2327,9 @@
 					"width": 40,
 					"height": 30,
 					"default_style": false,
+					"long_mode": "LV_LABEL_LONG_WRAP",
+					"text": "LV_SYMBOL_LEFT ",
+					"toggle": false,
 					"style": [
 						{
 							"part": "LV_PART_MAIN",
@@ -2336,17 +2337,17 @@
 							"disable": false,
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
 							"bg_grad_stop": 255,
-							"bg_opa": 255,
-							"border_color": "#2195f6",
 							"border_side": [
 								"LV_BORDER_SIDE_FULL"
 							],
 							"border_width": 0,
 							"border_opa": 255,
+							"border_color": "#2195f6",
 							"radius": 5,
 							"shadow_color": "#2195f6",
 							"shadow_opa": 255,
@@ -2370,16 +2371,16 @@
 							"disable": true,
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
 							"bg_grad_stop": 255,
-							"bg_opa": 255,
-							"border_color": "#2195f6",
 							"border_side": [
 								"LV_BORDER_SIDE_FULL"
 							],
 							"border_width": 0,
+							"border_color": "#2195f6",
 							"border_opa": 255,
 							"radius": 5,
 							"shadow_color": "#2195f6",
@@ -2403,16 +2404,16 @@
 							"disable": true,
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
 							"bg_grad_stop": 255,
-							"bg_opa": 255,
-							"border_color": "#2195f6",
 							"border_side": [
 								"LV_BORDER_SIDE_FULL"
 							],
 							"border_width": 0,
+							"border_color": "#2195f6",
 							"border_opa": 255,
 							"radius": 5,
 							"shadow_color": "#2195f6",
@@ -2435,9 +2436,8 @@
 							"state": "LV_STATE_CHECKED",
 							"disable": true,
 							"bg_color": "#2195f6",
-							"radius": 5,
-							"bg_opa": 255,
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
@@ -2448,6 +2448,7 @@
 							"border_width": 0,
 							"border_opa": 255,
 							"border_color": "#2195f6",
+							"radius": 5,
 							"shadow_color": "#2195f6",
 							"shadow_opa": 255,
 							"shadow_width": 0,
@@ -2469,21 +2470,18 @@
 							"disable": true,
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
 							"bg_grad_stop": 255,
-							"border_color": "#2195f6",
 							"border_side": [
 								"LV_BORDER_SIDE_FULL"
 							],
 							"border_width": 0,
 							"border_opa": 255,
-							"text_color": "#000000",
-							"font": 12,
-							"font_family": "montserratMedium",
+							"border_color": "#2195f6",
 							"radius": 5,
-							"bg_opa": 255,
 							"shadow_color": "#2195f6",
 							"shadow_opa": 255,
 							"shadow_width": 0,
@@ -2494,12 +2492,12 @@
 							"bg_img_opa": 255,
 							"bg_img_recolor": "#ffffff",
 							"bg_img_recolor_opa": 0,
-							"text_opa": 255
+							"font": 12,
+							"font_family": "montserratMedium",
+							"text_opa": 255,
+							"text_color": "#000000"
 						}
 					],
-					"long_mode": "LV_LABEL_LONG_WRAP",
-					"text": "LV_SYMBOL_LEFT ",
-					"toggle": false,
 					"event": {
 						"widget": {
 							"clicked": {
@@ -2521,6 +2519,9 @@
 					"width": 40,
 					"height": 30,
 					"default_style": false,
+					"long_mode": "LV_LABEL_LONG_WRAP",
+					"text": "LV_SYMBOL_RIGHT ",
+					"toggle": false,
 					"style": [
 						{
 							"part": "LV_PART_MAIN",
@@ -2528,17 +2529,17 @@
 							"disable": false,
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
 							"bg_grad_stop": 255,
-							"bg_opa": 255,
-							"border_color": "#2195f6",
 							"border_side": [
 								"LV_BORDER_SIDE_FULL"
 							],
 							"border_width": 0,
 							"border_opa": 255,
+							"border_color": "#2195f6",
 							"radius": 5,
 							"shadow_color": "#2195f6",
 							"shadow_opa": 255,
@@ -2562,16 +2563,16 @@
 							"disable": true,
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
 							"bg_grad_stop": 255,
-							"bg_opa": 255,
-							"border_color": "#2195f6",
 							"border_side": [
 								"LV_BORDER_SIDE_FULL"
 							],
 							"border_width": 0,
+							"border_color": "#2195f6",
 							"border_opa": 255,
 							"radius": 5,
 							"shadow_color": "#2195f6",
@@ -2595,16 +2596,16 @@
 							"disable": true,
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
 							"bg_grad_stop": 255,
-							"bg_opa": 255,
-							"border_color": "#2195f6",
 							"border_side": [
 								"LV_BORDER_SIDE_FULL"
 							],
 							"border_width": 0,
+							"border_color": "#2195f6",
 							"border_opa": 255,
 							"radius": 5,
 							"shadow_color": "#2195f6",
@@ -2627,9 +2628,8 @@
 							"state": "LV_STATE_CHECKED",
 							"disable": true,
 							"bg_color": "#2195f6",
-							"radius": 5,
-							"bg_opa": 255,
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
@@ -2640,6 +2640,7 @@
 							"border_width": 0,
 							"border_opa": 255,
 							"border_color": "#2195f6",
+							"radius": 5,
 							"shadow_color": "#2195f6",
 							"shadow_opa": 255,
 							"shadow_width": 0,
@@ -2661,21 +2662,18 @@
 							"disable": true,
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
 							"bg_main_stop": 0,
 							"bg_grad_stop": 255,
-							"border_color": "#2195f6",
 							"border_side": [
 								"LV_BORDER_SIDE_FULL"
 							],
 							"border_width": 0,
 							"border_opa": 255,
-							"text_color": "#000000",
-							"font": 12,
-							"font_family": "montserratMedium",
+							"border_color": "#2195f6",
 							"radius": 5,
-							"bg_opa": 255,
 							"shadow_color": "#2195f6",
 							"shadow_opa": 255,
 							"shadow_width": 0,
@@ -2686,12 +2684,12 @@
 							"bg_img_opa": 255,
 							"bg_img_recolor": "#ffffff",
 							"bg_img_recolor_opa": 0,
-							"text_opa": 255
+							"font": 12,
+							"font_family": "montserratMedium",
+							"text_opa": 255,
+							"text_color": "#000000"
 						}
 					],
-					"long_mode": "LV_LABEL_LONG_WRAP",
-					"text": "LV_SYMBOL_RIGHT ",
-					"toggle": false,
 					"event": {
 						"widget": {
 							"clicked": {
@@ -3015,6 +3013,14 @@
 					}
 				}
 			],
+			"event": {
+				"widget": {
+					"clicked": {
+						"condition": [],
+						"action": []
+					}
+				}
+			},
 			"style": [
 				{
 					"part": "LV_PART_MAIN",
@@ -3033,14 +3039,6 @@
 					"bg_img_recolor_opa": 0
 				}
 			],
-			"event": {
-				"widget": {
-					"clicked": {
-						"condition": [],
-						"action": []
-					}
-				}
-			},
 			"layerName": "ui_storage"
 		},
 		{
@@ -3266,8 +3264,7 @@
 								]
 							}
 						}
-					},
-					"dropToGap": false
+					}
 				},
 				{
 					"name": "label_title",
@@ -3632,6 +3629,7 @@
 					]
 				}
 			],
+			"event": {},
 			"style": [
 				{
 					"part": "LV_PART_MAIN",
@@ -3875,8 +3873,7 @@
 								]
 							}
 						}
-					},
-					"dropToGap": false
+					}
 				},
 				{
 					"name": "label_title",
@@ -3979,6 +3976,9 @@
 					]
 				}
 			],
+			"event": {
+				"widget": {}
+			},
 			"style": [
 				{
 					"part": "LV_PART_MAIN",
@@ -3997,9 +3997,6 @@
 					"bg_img_recolor_opa": 0
 				}
 			],
-			"event": {
-				"widget": {}
-			},
 			"layerName": "ui_IO"
 		},
 		{
@@ -4225,8 +4222,7 @@
 								]
 							}
 						}
-					},
-					"dropToGap": false
+					}
 				},
 				{
 					"name": "label_title",
@@ -4560,7 +4556,6 @@
 							"bg_opa": 255
 						}
 					],
-					"dropToGap": false,
 					"event": {
 						"widget": {
 							"clicked": {
@@ -4593,7 +4588,7 @@
 										"actionList": {
 											"custom_code": {
 												"inc_c": "",
-												"code_c": "if(lv_obj_has_state(guider_ui.ui_led_cb_blink, LV_STATE_CHECKED)) {\r\n    ui_led_cb_blink_checked = 1;\r\n} else {\r\n    ui_led_cb_blink_checked = 0;\r\n}\r\nLV_LOG_USER(\"LED auto blink: %d\", ui_led_cb_blink_checked);",
+												"code_c": "if(status) {\r\n    ui_led_cb_blink_checked = 1;\r\n} else {\r\n    ui_led_cb_blink_checked = 0;\r\n}\r\nLV_LOG_USER(\"LED auto blink: %d\", ui_led_cb_blink_checked);",
 												"inc_py": "",
 												"code_py": ""
 											}
@@ -4836,7 +4831,49 @@
 							"radius": 6,
 							"bg_opa": 255
 						}
-					]
+					],
+					"event": {
+						"widget": {
+							"clicked": {
+								"condition": [
+									{
+										"type": "switch",
+										"value": "status",
+										"id": "s0o3e37a",
+										"isSystem": true,
+										"children": [
+											{
+												"type": "case",
+												"id": "s0o3e37a_1",
+												"isSystem": true,
+												"value": "true"
+											},
+											{
+												"type": "case",
+												"id": "s0o3e37a_0",
+												"isSystem": true,
+												"value": "false"
+											}
+										]
+									}
+								],
+								"action": [
+									{
+										"dst": "custom_code",
+										"bindCondi": "",
+										"actionList": {
+											"custom_code": {
+												"inc_c": "",
+												"code_c": "if(status) {\r\n    ui_led_cb_sta_checked = 1;\r\n} else {\r\n    ui_led_cb_sta_checked = 0;\r\n}\r\nLV_LOG_USER(\"LED status: %d\", ui_led_cb_sta_checked);",
+												"inc_py": "",
+												"code_py": ""
+											}
+										}
+									}
+								]
+							}
+						}
+					}
 				},
 				{
 					"name": "label_blink",
@@ -5247,6 +5284,32 @@
 					}
 				}
 			],
+			"event": {
+				"widget": {
+					"screen_load_start": {
+						"condition": [],
+						"action": [
+							{
+								"dst": "custom_code",
+								"bindCondi": "",
+								"actionList": {
+									"custom_code": {
+										"inc_c": "static uint32_t ui_led_slider_period_val = 500;\r\nstatic bool ui_led_cb_blink_checked = 0;\r\nstatic bool ui_led_cb_sta_checked = 0;",
+										"code_c": "// 加载LED闪烁使能值\r\nif(ui_led_cb_blink_checked)\r\n    lv_obj_add_state(guider_ui.ui_led_cb_blink, LV_STATE_CHECKED);\r\n\r\n// 加载LED当前状态\r\n// ui_led_cb_sta_checked = ; // 读取LED状态\r\nif(ui_led_cb_sta_checked)\r\n    lv_obj_add_state(guider_ui.ui_led_cb_sta, LV_STATE_CHECKED);\r\n\r\n// 加载LED闪烁间隔值\r\nlv_slider_set_value(guider_ui.ui_led_slider_period, ui_led_slider_period_val, LV_ANIM_OFF);\r\nchar buf[5];\r\nlv_snprintf(buf, sizeof(buf), \"%4d\", ui_led_slider_period_val);  // 格式化为4位数\r\nlv_label_set_text(guider_ui.ui_led_label_period, buf);\r\n\r\n",
+										"inc_py": "",
+										"code_py": ""
+									}
+								}
+							},
+							{
+								"dst": "3kn2a073",
+								"bindCondi": "",
+								"actionList": {}
+							}
+						]
+					}
+				}
+			},
 			"style": [
 				{
 					"part": "LV_PART_MAIN",
@@ -5265,32 +5328,6 @@
 					"bg_img_recolor_opa": 0
 				}
 			],
-			"event": {
-				"widget": {
-					"screen_load_start": {
-						"condition": [],
-						"action": [
-							{
-								"dst": "custom_code",
-								"bindCondi": "",
-								"actionList": {
-									"custom_code": {
-										"inc_c": "static uint32_t ui_led_slider_period_val = 500;\r\nstatic uint8_t ui_led_cb_blink_checked = 0;",
-										"code_c": "// 加载LED闪烁间隔值\r\nlv_slider_set_value(guider_ui.ui_led_slider_period, ui_led_slider_period_val, LV_ANIM_OFF);\r\nchar buf[5];\r\nlv_snprintf(buf, sizeof(buf), \"%4d\", ui_led_slider_period_val);  // 格式化为4位数\r\nlv_label_set_text(guider_ui.ui_led_label_period, buf);\r\n\r\n// 加载LED闪烁使能值\r\nif( ui_led_cb_blink_checked )\r\n    lv_obj_add_state(guider_ui.ui_led_cb_blink, LV_STATE_CHECKED);\r\n\r\n",
-										"inc_py": "",
-										"code_py": ""
-									}
-								}
-							},
-							{
-								"dst": "3kn2a073",
-								"bindCondi": "",
-								"actionList": {}
-							}
-						]
-					}
-				}
-			},
 			"layerName": "ui_led"
 		}
 	],
@@ -5808,8 +5845,7 @@
 																	]
 																}
 															}
-														},
-														"dropToGap": false
+														}
 													},
 													{
 														"name": "label_title",
@@ -5912,6 +5948,9 @@
 														]
 													}
 												],
+												"event": {
+													"widget": {}
+												},
 												"style": [
 													{
 														"part": "LV_PART_MAIN",
@@ -5930,9 +5969,6 @@
 														"bg_img_recolor_opa": 0
 													}
 												],
-												"event": {
-													"widget": {}
-												},
 												"layerName": "ui_IO"
 											}
 										}
@@ -6370,8 +6406,7 @@
 																	]
 																}
 															}
-														},
-														"dropToGap": false
+														}
 													},
 													{
 														"name": "label_title",
@@ -6736,6 +6771,7 @@
 														]
 													}
 												],
+												"event": {},
 												"style": [
 													{
 														"part": "LV_PART_MAIN",
@@ -7191,8 +7227,7 @@
 																	]
 																}
 															}
-														},
-														"dropToGap": false
+														}
 													},
 													{
 														"name": "label_title",
@@ -7526,7 +7561,6 @@
 																"bg_opa": 255
 															}
 														],
-														"dropToGap": false,
 														"event": {
 															"widget": {
 																"clicked": {
@@ -7559,7 +7593,7 @@
 																			"actionList": {
 																				"custom_code": {
 																					"inc_c": "",
-																					"code_c": "if(lv_obj_has_state(guider_ui.ui_led_cb_blink, LV_STATE_CHECKED)) {\r\n    ui_led_cb_blink_checked = 1;\r\n} else {\r\n    ui_led_cb_blink_checked = 0;\r\n}\r\nLV_LOG_USER(\"LED auto blink: %d\", ui_led_cb_blink_checked);",
+																					"code_c": "if(status) {\r\n    ui_led_cb_blink_checked = 1;\r\n} else {\r\n    ui_led_cb_blink_checked = 0;\r\n}\r\nLV_LOG_USER(\"LED auto blink: %d\", ui_led_cb_blink_checked);",
 																					"inc_py": "",
 																					"code_py": ""
 																				}
@@ -7802,7 +7836,49 @@
 																"radius": 6,
 																"bg_opa": 255
 															}
-														]
+														],
+														"event": {
+															"widget": {
+																"clicked": {
+																	"condition": [
+																		{
+																			"type": "switch",
+																			"value": "status",
+																			"id": "s0o3e37a",
+																			"isSystem": true,
+																			"children": [
+																				{
+																					"type": "case",
+																					"id": "s0o3e37a_1",
+																					"isSystem": true,
+																					"value": "true"
+																				},
+																				{
+																					"type": "case",
+																					"id": "s0o3e37a_0",
+																					"isSystem": true,
+																					"value": "false"
+																				}
+																			]
+																		}
+																	],
+																	"action": [
+																		{
+																			"dst": "custom_code",
+																			"bindCondi": "",
+																			"actionList": {
+																				"custom_code": {
+																					"inc_c": "",
+																					"code_c": "if(status) {\r\n    ui_led_cb_sta_checked = 1;\r\n} else {\r\n    ui_led_cb_sta_checked = 0;\r\n}\r\nLV_LOG_USER(\"LED status: %d\", ui_led_cb_sta_checked);",
+																					"inc_py": "",
+																					"code_py": ""
+																				}
+																			}
+																		}
+																	]
+																}
+															}
+														}
 													},
 													{
 														"name": "label_blink",
@@ -8213,6 +8289,32 @@
 														}
 													}
 												],
+												"event": {
+													"widget": {
+														"screen_load_start": {
+															"condition": [],
+															"action": [
+																{
+																	"dst": "custom_code",
+																	"bindCondi": "",
+																	"actionList": {
+																		"custom_code": {
+																			"inc_c": "static uint32_t ui_led_slider_period_val = 500;\r\nstatic bool ui_led_cb_blink_checked = 0;\r\nstatic bool ui_led_cb_sta_checked = 0;",
+																			"code_c": "// 加载LED闪烁使能值\r\nif(ui_led_cb_blink_checked)\r\n    lv_obj_add_state(guider_ui.ui_led_cb_blink, LV_STATE_CHECKED);\r\n\r\n// 加载LED当前状态\r\n// ui_led_cb_sta_checked = ; // 读取LED状态\r\nif(ui_led_cb_sta_checked)\r\n    lv_obj_add_state(guider_ui.ui_led_cb_sta, LV_STATE_CHECKED);\r\n\r\n// 加载LED闪烁间隔值\r\nlv_slider_set_value(guider_ui.ui_led_slider_period, ui_led_slider_period_val, LV_ANIM_OFF);\r\nchar buf[5];\r\nlv_snprintf(buf, sizeof(buf), \"%4d\", ui_led_slider_period_val);  // 格式化为4位数\r\nlv_label_set_text(guider_ui.ui_led_label_period, buf);\r\n\r\n",
+																			"inc_py": "",
+																			"code_py": ""
+																		}
+																	}
+																},
+																{
+																	"dst": "3kn2a073",
+																	"bindCondi": "",
+																	"actionList": {}
+																}
+															]
+														}
+													}
+												},
 												"style": [
 													{
 														"part": "LV_PART_MAIN",
@@ -8231,32 +8333,6 @@
 														"bg_img_recolor_opa": 0
 													}
 												],
-												"event": {
-													"widget": {
-														"screen_load_start": {
-															"condition": [],
-															"action": [
-																{
-																	"dst": "custom_code",
-																	"bindCondi": "",
-																	"actionList": {
-																		"custom_code": {
-																			"inc_c": "static uint32_t ui_led_slider_period_val = 500;\r\nstatic uint8_t ui_led_cb_blink_checked = 0;",
-																			"code_c": "// 加载LED闪烁间隔值\r\nlv_slider_set_value(guider_ui.ui_led_slider_period, ui_led_slider_period_val, LV_ANIM_OFF);\r\nchar buf[5];\r\nlv_snprintf(buf, sizeof(buf), \"%4d\", ui_led_slider_period_val);  // 格式化为4位数\r\nlv_label_set_text(guider_ui.ui_led_label_period, buf);\r\n\r\n// 加载LED闪烁使能值\r\nif( ui_led_cb_blink_checked )\r\n    lv_obj_add_state(guider_ui.ui_led_cb_blink, LV_STATE_CHECKED);\r\n\r\n",
-																			"inc_py": "",
-																			"code_py": ""
-																		}
-																	}
-																},
-																{
-																	"dst": "3kn2a073",
-																	"bindCondi": "",
-																	"actionList": {}
-																}
-															]
-														}
-													}
-												},
 												"layerName": "ui_led"
 											}
 										}
@@ -8501,6 +8577,9 @@
 														"width": 40,
 														"height": 30,
 														"default_style": false,
+														"long_mode": "LV_LABEL_LONG_WRAP",
+														"text": "LV_SYMBOL_HOME ",
+														"toggle": false,
 														"style": [
 															{
 																"part": "LV_PART_MAIN",
@@ -8508,17 +8587,17 @@
 																"disable": false,
 																"bg_color": "#ff0027",
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
 																"bg_grad_stop": 255,
-																"bg_opa": 255,
-																"border_color": "#2195f6",
 																"border_side": [
 																	"LV_BORDER_SIDE_FULL"
 																],
 																"border_width": 0,
 																"border_opa": 255,
+																"border_color": "#2195f6",
 																"radius": 5,
 																"shadow_color": "#2195f6",
 																"shadow_opa": 255,
@@ -8542,16 +8621,16 @@
 																"disable": true,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
 																"bg_grad_stop": 255,
-																"bg_opa": 255,
-																"border_color": "#2195f6",
 																"border_side": [
 																	"LV_BORDER_SIDE_FULL"
 																],
 																"border_width": 0,
+																"border_color": "#2195f6",
 																"border_opa": 255,
 																"radius": 5,
 																"shadow_color": "#2195f6",
@@ -8575,16 +8654,16 @@
 																"disable": true,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
 																"bg_grad_stop": 255,
-																"bg_opa": 255,
-																"border_color": "#2195f6",
 																"border_side": [
 																	"LV_BORDER_SIDE_FULL"
 																],
 																"border_width": 0,
+																"border_color": "#2195f6",
 																"border_opa": 255,
 																"radius": 5,
 																"shadow_color": "#2195f6",
@@ -8607,9 +8686,8 @@
 																"state": "LV_STATE_CHECKED",
 																"disable": true,
 																"bg_color": "#2195f6",
-																"radius": 5,
-																"bg_opa": 255,
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
@@ -8620,6 +8698,7 @@
 																"border_width": 0,
 																"border_opa": 255,
 																"border_color": "#2195f6",
+																"radius": 5,
 																"shadow_color": "#2195f6",
 																"shadow_opa": 255,
 																"shadow_width": 0,
@@ -8641,21 +8720,18 @@
 																"disable": true,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
 																"bg_grad_stop": 255,
-																"border_color": "#2195f6",
 																"border_side": [
 																	"LV_BORDER_SIDE_FULL"
 																],
 																"border_width": 0,
 																"border_opa": 255,
-																"text_color": "#000000",
-																"font": 12,
-																"font_family": "montserratMedium",
+																"border_color": "#2195f6",
 																"radius": 5,
-																"bg_opa": 255,
 																"shadow_color": "#2195f6",
 																"shadow_opa": 255,
 																"shadow_width": 0,
@@ -8666,12 +8742,12 @@
 																"bg_img_opa": 255,
 																"bg_img_recolor": "#ffffff",
 																"bg_img_recolor_opa": 0,
-																"text_opa": 255
+																"font": 12,
+																"font_family": "montserratMedium",
+																"text_opa": 255,
+																"text_color": "#000000"
 															}
 														],
-														"long_mode": "LV_LABEL_LONG_WRAP",
-														"text": "LV_SYMBOL_HOME ",
-														"toggle": false,
 														"event": {
 															"widget": {
 																"clicked": {
@@ -8694,8 +8770,7 @@
 																	]
 																}
 															}
-														},
-														"dropToGap": false
+														}
 													},
 													{
 														"name": "label_page",
@@ -8909,6 +8984,9 @@
 														"width": 40,
 														"height": 30,
 														"default_style": false,
+														"long_mode": "LV_LABEL_LONG_WRAP",
+														"text": "LV_SYMBOL_LEFT ",
+														"toggle": false,
 														"style": [
 															{
 																"part": "LV_PART_MAIN",
@@ -8916,17 +8994,17 @@
 																"disable": false,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
 																"bg_grad_stop": 255,
-																"bg_opa": 255,
-																"border_color": "#2195f6",
 																"border_side": [
 																	"LV_BORDER_SIDE_FULL"
 																],
 																"border_width": 0,
 																"border_opa": 255,
+																"border_color": "#2195f6",
 																"radius": 5,
 																"shadow_color": "#2195f6",
 																"shadow_opa": 255,
@@ -8950,16 +9028,16 @@
 																"disable": true,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
 																"bg_grad_stop": 255,
-																"bg_opa": 255,
-																"border_color": "#2195f6",
 																"border_side": [
 																	"LV_BORDER_SIDE_FULL"
 																],
 																"border_width": 0,
+																"border_color": "#2195f6",
 																"border_opa": 255,
 																"radius": 5,
 																"shadow_color": "#2195f6",
@@ -8983,16 +9061,16 @@
 																"disable": true,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
 																"bg_grad_stop": 255,
-																"bg_opa": 255,
-																"border_color": "#2195f6",
 																"border_side": [
 																	"LV_BORDER_SIDE_FULL"
 																],
 																"border_width": 0,
+																"border_color": "#2195f6",
 																"border_opa": 255,
 																"radius": 5,
 																"shadow_color": "#2195f6",
@@ -9015,9 +9093,8 @@
 																"state": "LV_STATE_CHECKED",
 																"disable": true,
 																"bg_color": "#2195f6",
-																"radius": 5,
-																"bg_opa": 255,
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
@@ -9028,6 +9105,7 @@
 																"border_width": 0,
 																"border_opa": 255,
 																"border_color": "#2195f6",
+																"radius": 5,
 																"shadow_color": "#2195f6",
 																"shadow_opa": 255,
 																"shadow_width": 0,
@@ -9049,21 +9127,18 @@
 																"disable": true,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
 																"bg_grad_stop": 255,
-																"border_color": "#2195f6",
 																"border_side": [
 																	"LV_BORDER_SIDE_FULL"
 																],
 																"border_width": 0,
 																"border_opa": 255,
-																"text_color": "#000000",
-																"font": 12,
-																"font_family": "montserratMedium",
+																"border_color": "#2195f6",
 																"radius": 5,
-																"bg_opa": 255,
 																"shadow_color": "#2195f6",
 																"shadow_opa": 255,
 																"shadow_width": 0,
@@ -9074,12 +9149,12 @@
 																"bg_img_opa": 255,
 																"bg_img_recolor": "#ffffff",
 																"bg_img_recolor_opa": 0,
-																"text_opa": 255
+																"font": 12,
+																"font_family": "montserratMedium",
+																"text_opa": 255,
+																"text_color": "#000000"
 															}
 														],
-														"long_mode": "LV_LABEL_LONG_WRAP",
-														"text": "LV_SYMBOL_LEFT ",
-														"toggle": false,
 														"event": {
 															"widget": {
 																"clicked": {
@@ -9101,6 +9176,9 @@
 														"width": 40,
 														"height": 30,
 														"default_style": false,
+														"long_mode": "LV_LABEL_LONG_WRAP",
+														"text": "LV_SYMBOL_RIGHT ",
+														"toggle": false,
 														"style": [
 															{
 																"part": "LV_PART_MAIN",
@@ -9108,17 +9186,17 @@
 																"disable": false,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
 																"bg_grad_stop": 255,
-																"bg_opa": 255,
-																"border_color": "#2195f6",
 																"border_side": [
 																	"LV_BORDER_SIDE_FULL"
 																],
 																"border_width": 0,
 																"border_opa": 255,
+																"border_color": "#2195f6",
 																"radius": 5,
 																"shadow_color": "#2195f6",
 																"shadow_opa": 255,
@@ -9142,16 +9220,16 @@
 																"disable": true,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
 																"bg_grad_stop": 255,
-																"bg_opa": 255,
-																"border_color": "#2195f6",
 																"border_side": [
 																	"LV_BORDER_SIDE_FULL"
 																],
 																"border_width": 0,
+																"border_color": "#2195f6",
 																"border_opa": 255,
 																"radius": 5,
 																"shadow_color": "#2195f6",
@@ -9175,16 +9253,16 @@
 																"disable": true,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
 																"bg_grad_stop": 255,
-																"bg_opa": 255,
-																"border_color": "#2195f6",
 																"border_side": [
 																	"LV_BORDER_SIDE_FULL"
 																],
 																"border_width": 0,
+																"border_color": "#2195f6",
 																"border_opa": 255,
 																"radius": 5,
 																"shadow_color": "#2195f6",
@@ -9207,9 +9285,8 @@
 																"state": "LV_STATE_CHECKED",
 																"disable": true,
 																"bg_color": "#2195f6",
-																"radius": 5,
-																"bg_opa": 255,
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
@@ -9220,6 +9297,7 @@
 																"border_width": 0,
 																"border_opa": 255,
 																"border_color": "#2195f6",
+																"radius": 5,
 																"shadow_color": "#2195f6",
 																"shadow_opa": 255,
 																"shadow_width": 0,
@@ -9241,21 +9319,18 @@
 																"disable": true,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
+																"bg_opa": 255,
 																"bg_grad_dir": "LV_GRAD_DIR_NONE",
 																"bg_dither_mode": "LV_DITHER_NONE",
 																"bg_main_stop": 0,
 																"bg_grad_stop": 255,
-																"border_color": "#2195f6",
 																"border_side": [
 																	"LV_BORDER_SIDE_FULL"
 																],
 																"border_width": 0,
 																"border_opa": 255,
-																"text_color": "#000000",
-																"font": 12,
-																"font_family": "montserratMedium",
+																"border_color": "#2195f6",
 																"radius": 5,
-																"bg_opa": 255,
 																"shadow_color": "#2195f6",
 																"shadow_opa": 255,
 																"shadow_width": 0,
@@ -9266,12 +9341,12 @@
 																"bg_img_opa": 255,
 																"bg_img_recolor": "#ffffff",
 																"bg_img_recolor_opa": 0,
-																"text_opa": 255
+																"font": 12,
+																"font_family": "montserratMedium",
+																"text_opa": 255,
+																"text_color": "#000000"
 															}
 														],
-														"long_mode": "LV_LABEL_LONG_WRAP",
-														"text": "LV_SYMBOL_RIGHT ",
-														"toggle": false,
 														"event": {
 															"widget": {
 																"clicked": {
@@ -9595,6 +9670,14 @@
 														}
 													}
 												],
+												"event": {
+													"widget": {
+														"clicked": {
+															"condition": [],
+															"action": []
+														}
+													}
+												},
 												"style": [
 													{
 														"part": "LV_PART_MAIN",
@@ -9613,14 +9696,6 @@
 														"bg_img_recolor_opa": 0
 													}
 												],
-												"event": {
-													"widget": {
-														"clicked": {
-															"condition": [],
-															"action": []
-														}
-													}
-												},
 												"layerName": "ui_storage"
 											}
 										}
@@ -10161,6 +10236,9 @@
 														]
 													}
 												],
+												"event": {
+													"widget": {}
+												},
 												"style": [
 													{
 														"part": "LV_PART_MAIN",
@@ -10179,9 +10257,6 @@
 														"bg_img_recolor_opa": 0
 													}
 												],
-												"event": {
-													"widget": {}
-												},
 												"layerName": "ui_settings"
 											}
 										}
@@ -10381,6 +10456,9 @@
 				"height": 240,
 				"visible": true,
 				"flag": [],
+				"event": {
+					"widget": {}
+				},
 				"style": [
 					{
 						"part": "LV_PART_MAIN",
@@ -10399,9 +10477,6 @@
 						"bg_img_recolor_opa": 0
 					}
 				],
-				"event": {
-					"widget": {}
-				},
 				"layerName": "ui_settings",
 				"size": [
 					320,
@@ -10768,8 +10843,7 @@
 																	]
 																}
 															}
-														},
-														"dropToGap": false
+														}
 													},
 													{
 														"name": "btn_storage",
@@ -12010,6 +12084,14 @@
 				"height": 240,
 				"visible": true,
 				"flag": [],
+				"event": {
+					"widget": {
+						"clicked": {
+							"condition": [],
+							"action": []
+						}
+					}
+				},
 				"style": [
 					{
 						"part": "LV_PART_MAIN",
@@ -12028,14 +12110,6 @@
 						"bg_img_recolor_opa": 0
 					}
 				],
-				"event": {
-					"widget": {
-						"clicked": {
-							"condition": [],
-							"action": []
-						}
-					}
-				},
 				"layerName": "ui_storage",
 				"size": [
 					320,
@@ -12449,17 +12523,17 @@
 								"disable": false,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
 								"bg_grad_stop": 255,
-								"bg_opa": 255,
-								"border_color": "#2195f6",
 								"border_side": [
 									"LV_BORDER_SIDE_FULL"
 								],
 								"border_width": 0,
 								"border_opa": 255,
+								"border_color": "#2195f6",
 								"radius": 5,
 								"shadow_color": "#2195f6",
 								"shadow_opa": 255,
@@ -12483,16 +12557,16 @@
 								"disable": true,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
 								"bg_grad_stop": 255,
-								"bg_opa": 255,
-								"border_color": "#2195f6",
 								"border_side": [
 									"LV_BORDER_SIDE_FULL"
 								],
 								"border_width": 0,
+								"border_color": "#2195f6",
 								"border_opa": 255,
 								"radius": 5,
 								"shadow_color": "#2195f6",
@@ -12516,16 +12590,16 @@
 								"disable": true,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
 								"bg_grad_stop": 255,
-								"bg_opa": 255,
-								"border_color": "#2195f6",
 								"border_side": [
 									"LV_BORDER_SIDE_FULL"
 								],
 								"border_width": 0,
+								"border_color": "#2195f6",
 								"border_opa": 255,
 								"radius": 5,
 								"shadow_color": "#2195f6",
@@ -12548,9 +12622,8 @@
 								"state": "LV_STATE_CHECKED",
 								"disable": true,
 								"bg_color": "#2195f6",
-								"radius": 5,
-								"bg_opa": 255,
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
@@ -12561,6 +12634,7 @@
 								"border_width": 0,
 								"border_opa": 255,
 								"border_color": "#2195f6",
+								"radius": 5,
 								"shadow_color": "#2195f6",
 								"shadow_opa": 255,
 								"shadow_width": 0,
@@ -12582,21 +12656,18 @@
 								"disable": true,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
 								"bg_grad_stop": 255,
-								"border_color": "#2195f6",
 								"border_side": [
 									"LV_BORDER_SIDE_FULL"
 								],
 								"border_width": 0,
 								"border_opa": 255,
-								"text_color": "#000000",
-								"font": 12,
-								"font_family": "montserratMedium",
+								"border_color": "#2195f6",
 								"radius": 5,
-								"bg_opa": 255,
 								"shadow_color": "#2195f6",
 								"shadow_opa": 255,
 								"shadow_width": 0,
@@ -12607,7 +12678,10 @@
 								"bg_img_opa": 255,
 								"bg_img_recolor": "#ffffff",
 								"bg_img_recolor_opa": 0,
-								"text_opa": 255
+								"font": 12,
+								"font_family": "montserratMedium",
+								"text_opa": 255,
+								"text_color": "#000000"
 							}
 						],
 						"text": "LV_SYMBOL_RIGHT ",
@@ -12645,17 +12719,17 @@
 								"disable": false,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
 								"bg_grad_stop": 255,
-								"bg_opa": 255,
-								"border_color": "#2195f6",
 								"border_side": [
 									"LV_BORDER_SIDE_FULL"
 								],
 								"border_width": 0,
 								"border_opa": 255,
+								"border_color": "#2195f6",
 								"radius": 5,
 								"shadow_color": "#2195f6",
 								"shadow_opa": 255,
@@ -12679,16 +12753,16 @@
 								"disable": true,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
 								"bg_grad_stop": 255,
-								"bg_opa": 255,
-								"border_color": "#2195f6",
 								"border_side": [
 									"LV_BORDER_SIDE_FULL"
 								],
 								"border_width": 0,
+								"border_color": "#2195f6",
 								"border_opa": 255,
 								"radius": 5,
 								"shadow_color": "#2195f6",
@@ -12712,16 +12786,16 @@
 								"disable": true,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
 								"bg_grad_stop": 255,
-								"bg_opa": 255,
-								"border_color": "#2195f6",
 								"border_side": [
 									"LV_BORDER_SIDE_FULL"
 								],
 								"border_width": 0,
+								"border_color": "#2195f6",
 								"border_opa": 255,
 								"radius": 5,
 								"shadow_color": "#2195f6",
@@ -12744,9 +12818,8 @@
 								"state": "LV_STATE_CHECKED",
 								"disable": true,
 								"bg_color": "#2195f6",
-								"radius": 5,
-								"bg_opa": 255,
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
@@ -12757,6 +12830,7 @@
 								"border_width": 0,
 								"border_opa": 255,
 								"border_color": "#2195f6",
+								"radius": 5,
 								"shadow_color": "#2195f6",
 								"shadow_opa": 255,
 								"shadow_width": 0,
@@ -12778,21 +12852,18 @@
 								"disable": true,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
 								"bg_grad_stop": 255,
-								"border_color": "#2195f6",
 								"border_side": [
 									"LV_BORDER_SIDE_FULL"
 								],
 								"border_width": 0,
 								"border_opa": 255,
-								"text_color": "#000000",
-								"font": 12,
-								"font_family": "montserratMedium",
+								"border_color": "#2195f6",
 								"radius": 5,
-								"bg_opa": 255,
 								"shadow_color": "#2195f6",
 								"shadow_opa": 255,
 								"shadow_width": 0,
@@ -12803,7 +12874,10 @@
 								"bg_img_opa": 255,
 								"bg_img_recolor": "#ffffff",
 								"bg_img_recolor_opa": 0,
-								"text_opa": 255
+								"font": 12,
+								"font_family": "montserratMedium",
+								"text_opa": 255,
+								"text_color": "#000000"
 							}
 						],
 						"text": "LV_SYMBOL_LEFT ",
@@ -13273,8 +13347,7 @@
 																	]
 																}
 															}
-														},
-														"dropToGap": false
+														}
 													},
 													{
 														"name": "btn_storage",
@@ -14331,17 +14404,17 @@
 								"disable": false,
 								"bg_color": "#ff0027",
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
 								"bg_grad_stop": 255,
-								"bg_opa": 255,
-								"border_color": "#2195f6",
 								"border_side": [
 									"LV_BORDER_SIDE_FULL"
 								],
 								"border_width": 0,
 								"border_opa": 255,
+								"border_color": "#2195f6",
 								"radius": 5,
 								"shadow_color": "#2195f6",
 								"shadow_opa": 255,
@@ -14365,16 +14438,16 @@
 								"disable": true,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
 								"bg_grad_stop": 255,
-								"bg_opa": 255,
-								"border_color": "#2195f6",
 								"border_side": [
 									"LV_BORDER_SIDE_FULL"
 								],
 								"border_width": 0,
+								"border_color": "#2195f6",
 								"border_opa": 255,
 								"radius": 5,
 								"shadow_color": "#2195f6",
@@ -14398,16 +14471,16 @@
 								"disable": true,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
 								"bg_grad_stop": 255,
-								"bg_opa": 255,
-								"border_color": "#2195f6",
 								"border_side": [
 									"LV_BORDER_SIDE_FULL"
 								],
 								"border_width": 0,
+								"border_color": "#2195f6",
 								"border_opa": 255,
 								"radius": 5,
 								"shadow_color": "#2195f6",
@@ -14430,9 +14503,8 @@
 								"state": "LV_STATE_CHECKED",
 								"disable": true,
 								"bg_color": "#2195f6",
-								"radius": 5,
-								"bg_opa": 255,
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
@@ -14443,6 +14515,7 @@
 								"border_width": 0,
 								"border_opa": 255,
 								"border_color": "#2195f6",
+								"radius": 5,
 								"shadow_color": "#2195f6",
 								"shadow_opa": 255,
 								"shadow_width": 0,
@@ -14464,21 +14537,18 @@
 								"disable": true,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
 								"bg_main_stop": 0,
 								"bg_grad_stop": 255,
-								"border_color": "#2195f6",
 								"border_side": [
 									"LV_BORDER_SIDE_FULL"
 								],
 								"border_width": 0,
 								"border_opa": 255,
-								"text_color": "#000000",
-								"font": 12,
-								"font_family": "montserratMedium",
+								"border_color": "#2195f6",
 								"radius": 5,
-								"bg_opa": 255,
 								"shadow_color": "#2195f6",
 								"shadow_opa": 255,
 								"shadow_width": 0,
@@ -14489,7 +14559,10 @@
 								"bg_img_opa": 255,
 								"bg_img_recolor": "#ffffff",
 								"bg_img_recolor_opa": 0,
-								"text_opa": 255
+								"font": 12,
+								"font_family": "montserratMedium",
+								"text_opa": 255,
+								"text_color": "#000000"
 							}
 						],
 						"text": "LV_SYMBOL_HOME ",
@@ -14515,6 +14588,7 @@
 				"height": 240,
 				"visible": true,
 				"flag": [],
+				"event": {},
 				"style": [
 					{
 						"part": "LV_PART_MAIN",
@@ -15188,8 +15262,7 @@
 																	]
 																}
 															}
-														},
-														"dropToGap": false
+														}
 													},
 													{
 														"name": "btn_storage",
@@ -16430,6 +16503,9 @@
 				"height": 240,
 				"visible": true,
 				"flag": [],
+				"event": {
+					"widget": {}
+				},
 				"style": [
 					{
 						"part": "LV_PART_MAIN",
@@ -16448,9 +16524,6 @@
 						"bg_img_recolor_opa": 0
 					}
 				],
-				"event": {
-					"widget": {}
-				},
 				"layerName": "ui_IO",
 				"size": [
 					320,
@@ -16817,8 +16890,7 @@
 																	]
 																}
 															}
-														},
-														"dropToGap": false
+														}
 													},
 													{
 														"name": "btn_storage",
@@ -18059,24 +18131,6 @@
 				"height": 240,
 				"visible": true,
 				"flag": [],
-				"style": [
-					{
-						"part": "LV_PART_MAIN",
-						"state": "LV_STATE_DEFAULT",
-						"disable": false,
-						"bg_color": "#ffffff",
-						"bg_grad_dir": "LV_GRAD_DIR_NONE",
-						"bg_dither_mode": "LV_DITHER_NONE",
-						"bg_main_stop": 0,
-						"bg_grad_stop": 255,
-						"bg_grad_color": "#2195f6",
-						"bg_opa": 0,
-						"bg_img_src": "",
-						"bg_img_opa": 255,
-						"bg_img_recolor": "#ffffff",
-						"bg_img_recolor_opa": 0
-					}
-				],
 				"event": {
 					"widget": {
 						"screen_load_start": {
@@ -18087,8 +18141,8 @@
 									"bindCondi": "",
 									"actionList": {
 										"custom_code": {
-											"inc_c": "static uint32_t ui_led_slider_period_val = 500;\r\nstatic uint8_t ui_led_cb_blink_checked = 0;",
-											"code_c": "// 加载LED闪烁间隔值\r\nlv_slider_set_value(guider_ui.ui_led_slider_period, ui_led_slider_period_val, LV_ANIM_OFF);\r\nchar buf[5];\r\nlv_snprintf(buf, sizeof(buf), \"%4d\", ui_led_slider_period_val);  // 格式化为4位数\r\nlv_label_set_text(guider_ui.ui_led_label_period, buf);\r\n\r\n// 加载LED闪烁使能值\r\nif( ui_led_cb_blink_checked )\r\n    lv_obj_add_state(guider_ui.ui_led_cb_blink, LV_STATE_CHECKED);\r\n\r\n",
+											"inc_c": "static uint32_t ui_led_slider_period_val = 500;\r\nstatic bool ui_led_cb_blink_checked = 0;\r\nstatic bool ui_led_cb_sta_checked = 0;",
+											"code_c": "// 加载LED闪烁使能值\r\nif(ui_led_cb_blink_checked)\r\n    lv_obj_add_state(guider_ui.ui_led_cb_blink, LV_STATE_CHECKED);\r\n\r\n// 加载LED当前状态\r\n// ui_led_cb_sta_checked = ; // 读取LED状态\r\nif(ui_led_cb_sta_checked)\r\n    lv_obj_add_state(guider_ui.ui_led_cb_sta, LV_STATE_CHECKED);\r\n\r\n// 加载LED闪烁间隔值\r\nlv_slider_set_value(guider_ui.ui_led_slider_period, ui_led_slider_period_val, LV_ANIM_OFF);\r\nchar buf[5];\r\nlv_snprintf(buf, sizeof(buf), \"%4d\", ui_led_slider_period_val);  // 格式化为4位数\r\nlv_label_set_text(guider_ui.ui_led_label_period, buf);\r\n\r\n",
 											"inc_py": "",
 											"code_py": ""
 										}
@@ -18331,7 +18385,6 @@
 												"bg_opa": 255
 											}
 										],
-										"dropToGap": false,
 										"event": {
 											"widget": {
 												"clicked": {
@@ -18364,7 +18417,7 @@
 															"actionList": {
 																"custom_code": {
 																	"inc_c": "",
-																	"code_c": "if(lv_obj_has_state(guider_ui.ui_led_cb_blink, LV_STATE_CHECKED)) {\r\n    ui_led_cb_blink_checked = 1;\r\n} else {\r\n    ui_led_cb_blink_checked = 0;\r\n}\r\nLV_LOG_USER(\"LED auto blink: %d\", ui_led_cb_blink_checked);",
+																	"code_c": "if(status) {\r\n    ui_led_cb_blink_checked = 1;\r\n} else {\r\n    ui_led_cb_blink_checked = 0;\r\n}\r\nLV_LOG_USER(\"LED auto blink: %d\", ui_led_cb_blink_checked);",
 																	"inc_py": "",
 																	"code_py": ""
 																}
@@ -18381,6 +18434,24 @@
 						}
 					}
 				},
+				"style": [
+					{
+						"part": "LV_PART_MAIN",
+						"state": "LV_STATE_DEFAULT",
+						"disable": false,
+						"bg_color": "#ffffff",
+						"bg_grad_dir": "LV_GRAD_DIR_NONE",
+						"bg_dither_mode": "LV_DITHER_NONE",
+						"bg_main_stop": 0,
+						"bg_grad_stop": 255,
+						"bg_grad_color": "#2195f6",
+						"bg_opa": 0,
+						"bg_img_src": "",
+						"bg_img_opa": 255,
+						"bg_img_recolor": "#ffffff",
+						"bg_img_recolor_opa": 0
+					}
+				],
 				"layerName": "ui_led",
 				"size": [
 					320,
@@ -18823,6 +18894,48 @@
 							null
 						],
 						"default_style": false,
+						"event": {
+							"widget": {
+								"clicked": {
+									"condition": [
+										{
+											"type": "switch",
+											"value": "status",
+											"id": "s0o3e37a",
+											"isSystem": true,
+											"children": [
+												{
+													"type": "case",
+													"id": "s0o3e37a_1",
+													"isSystem": true,
+													"value": "true"
+												},
+												{
+													"type": "case",
+													"id": "s0o3e37a_0",
+													"isSystem": true,
+													"value": "false"
+												}
+											]
+										}
+									],
+									"action": [
+										{
+											"dst": "custom_code",
+											"bindCondi": "",
+											"actionList": {
+												"custom_code": {
+													"inc_c": "",
+													"code_c": "if(status) {\r\n    ui_led_cb_sta_checked = 1;\r\n} else {\r\n    ui_led_cb_sta_checked = 0;\r\n}\r\nLV_LOG_USER(\"LED status: %d\", ui_led_cb_sta_checked);",
+													"inc_py": "",
+													"code_py": ""
+												}
+											}
+										}
+									]
+								}
+							}
+						},
 						"style": [
 							{
 								"part": "LV_PART_MAIN",
@@ -19093,7 +19206,7 @@
 											"actionList": {
 												"custom_code": {
 													"inc_c": "",
-													"code_c": "if(lv_obj_has_state(guider_ui.ui_led_cb_blink, LV_STATE_CHECKED)) {\r\n    ui_led_cb_blink_checked = 1;\r\n} else {\r\n    ui_led_cb_blink_checked = 0;\r\n}\r\nLV_LOG_USER(\"LED auto blink: %d\", ui_led_cb_blink_checked);",
+													"code_c": "if(status) {\r\n    ui_led_cb_blink_checked = 1;\r\n} else {\r\n    ui_led_cb_blink_checked = 0;\r\n}\r\nLV_LOG_USER(\"LED auto blink: %d\", ui_led_cb_blink_checked);",
 													"inc_py": "",
 													"code_py": ""
 												}
@@ -19686,8 +19799,7 @@
 																	]
 																}
 															}
-														},
-														"dropToGap": false
+														}
 													},
 													{
 														"name": "btn_storage",
